@@ -61,7 +61,7 @@ class HomeController extends Controller
             $config->name= $request->name;
             $config->success_text = $request->success_text;
             
-            $url = 'images/';
+            $url = 'images';
 
             if($request->hasFile('logo')){
               $imageName = 'logo' . time() . '.' . $request->logo->getClientOriginalExtension();
@@ -70,7 +70,7 @@ class HomeController extends Controller
               $imagen->url = $url . '/' . $imageName;
               $imagen->save();
           
-              $request->logo_id = $imagen->id;
+              $config->logo_id = $imagen->id;
             }
 
             if($request->hasFile('landingBg')){
@@ -80,7 +80,7 @@ class HomeController extends Controller
               $imagen2->url = $url . '/' . $imageName;
               $imagen2->save();
           
-              $request->landing_background_id = $imagen2->id;
+              $config->landing_background_id = $imagen2->id;
             }
 
             if($request->hasFile('successBg')){
@@ -90,7 +90,7 @@ class HomeController extends Controller
               $imagen3->url = $url . '/' . $imageName;
               $imagen3->save();
           
-              $request->success_background_id = $imagen3->id;
+              $config->success_background_id = $imagen3->id;
             }
 
             if($request->hasFile('publicity')){
@@ -100,7 +100,7 @@ class HomeController extends Controller
               $imagen4->url = $url . '/' . $imageName;
               $imagen4->save();
           
-              $request->publicity_id = $imagen4->id;
+              $config->publicity_id = $imagen4->id;
             }
 
             $config->save();
