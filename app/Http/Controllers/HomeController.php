@@ -8,7 +8,7 @@ use App\Config;
 use App\Image;
 use DB;
 use Validator;
-
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -27,14 +27,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $configuration = app('db')->select("SELECT name,(SELECT url FROM images WHERE id = logo_id) AS logo FROM config");
-        $data['config'] = $configuration[0];
-        $data['clients'] = Client::all();
+    public function index(Request $request){
         
-        return view('home')->with($data);
+      $configuration = app('db')->select("SELECT name,(SELECT url FROM images WHERE id = logo_id) AS logo FROM config");
+      $data['config'] = $configuration[0];
+      
+      $query = Client::selectRaw('*');
+      if($request->inicio != '' and $request->fin != '' ){
+        $query->whereBetween('created_at', [ $request->inicio, $request->fin]);
+      }elseif($request->fecha != ''){
+        $query->whereRaw('? = created_at', $request->fecha);
+      }
+      $data['clients'] = $query->get();
+        
+      return view('home')->with($data);
     }
+
 
     public function config(){
         $configuration = app('db')->select("SELECT name, success_text,
