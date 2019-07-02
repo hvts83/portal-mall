@@ -14,10 +14,9 @@
 
 <body class="bg-gray">
     <div class="loginBox2 text-center animated fadeInDown">
-        <div>
-            <h3>Portal mall</h3>
-            <p>Inicie sesión con sus credenciales.</p>
-            <form  method="POST" action="{{ route('login') }}">
+        <div class="login-wrap">
+            <h3>Inicie sesión con sus credenciales.</h3>
+            <form method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
                 <div class="form-group{{ $errors->has('usuario') ? ' has-error' : '' }}">
                     <input type="text" class="form-control" placeholder="usuario" name="usuario" value="{{ old('usuario') }}" required autofocus>

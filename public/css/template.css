@@ -16,17 +16,21 @@
 
 .loginBox2 {
   background: rgba(0,0,0,0.5);
-  width: 300px;
-  max-width: 400px;
+  width: 450px;
+  max-width: 600px;
   z-index: 100;
-  margin: 0 auto;
-  padding: 50px 10px 10px 10px 10px;
+  margin: 100px auto;
+  padding: 50px 30px 30px 30px 30px;
   color: #ffffff;
 }
 
 .form-wrap{
   background-color: black;
   padding: 20px;
+}
+
+.login-wrap{
+  padding: 30px;
 }
 
 .bg-gray {
