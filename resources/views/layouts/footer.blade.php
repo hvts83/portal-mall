@@ -3,6 +3,6 @@
         -
     </div>
     <div>
-        <strong>Copyright</strong> {{ $config->name }} Laboratorio de Patologías &copy; 2019
+        <strong>Copyright</strong> {{ $config->name }} MALL SAN GABRIEL &copy; 2019
     </div>
 </div>

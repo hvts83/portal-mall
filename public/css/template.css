@@ -1,17 +1,15 @@
 .img-logo {
-    width: 192px;
-    height: 192px;
+    height: 100px;
 }
 .loginBox {
-    background: rgba(0,0,0,0.4);
-    width: 300px;
-    max-width: 400px;
+    background-color: white;
+    width: 450px;
+    max-width: 600px;
     z-index: 100;
     margin: 0 auto;
     margin-top: 40px;
     border-radius: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 30px;
     color: #ffffff;
 }
 
@@ -21,8 +19,13 @@
   max-width: 400px;
   z-index: 100;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 50px 10px 10px 10px 10px;
   color: #ffffff;
+}
+
+.form-wrap{
+  background-color: black;
+  padding: 20px;
 }
 
 .bg-gray {
@@ -43,7 +46,8 @@
   }
 
   .img-publicity{
+      padding-top: 10px;
       width: 100%;
-      height: 120px;
+      height: 100px;
   }
 

@@ -29,9 +29,9 @@
             </div>
         @endif
         
-        <div>
-            <div class="text-center"><img class="img-logo img-circle" src="{{ $config->logo }}" /></div>
-            <form class="m-t" role="form" action="send" method="POST">
+        <div >
+            <div class="text-center"><img class="img-logo" src="{{ $config->logo }}" /></div>
+            <form class="m-t form-wrap" role="form" action="send" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="email">Correo</label>
