@@ -20,9 +20,11 @@
 >
     <div class="loginBox text-center animated fadeInDown">
         <div>
-            <div><img class="img-logo img-circle" src="{{ $config->logo }}" /></div>
-            <h3>Bienvenido</h3>
+            <div><img class="img-logo" src="{{ $config->logo }}" /></div>
+            <div class="form-wrap">
+            <h2>Bienvenido</h2>
             <p>{{ $config->success_text }}</p>
+            </div>
             <div><img src="{{ $config->publicity }}" class="img-publicity" /></div>
         </div>
     </div>
