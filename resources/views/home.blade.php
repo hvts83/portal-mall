@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+
+@php use Carbon\Carbon; @endphp
+
 <div class="container">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
@@ -50,6 +53,7 @@
                                     <th>#</th>
                                     <th>Correo</th>
                                     <th>Fecha nacimiento</th>
+                                    <th>Edad</th>
                                     <th>Sexo</th>
                                     <th>Fecha de realización</th>
                                     <th>Interes en promoción</th>
@@ -61,6 +65,7 @@
                                     <td>{{ $client->id }}</td>
                                     <td>{{ $client->email}}</td>
                                     <td>{{ $client->birthday}}</td>
+                                    <td>{{ Carbon::parse($client->birthday)->age }} años</td>
                                     <td class="center">{{ $client->sexo}}</td>
                                     <td class="center">{{ $client->created_at }} </td>
                                     <td class="center">{{ $client->promocion== 1 ? "Activado": "No activado" }}</td>
