@@ -11,4 +11,5 @@ CREATE TABLE `banners` (
 ALTER TABLE `config`
 DROP `publicity_id`;
 
-Agregar
+ALTER TABLE `banners`
+CHANGE `deleted_at` `deleted_at` timestamp NULL AFTER `updated_at`;
