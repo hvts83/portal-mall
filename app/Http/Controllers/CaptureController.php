@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Client;
+use App\Banner;
 
 class CaptureController extends Controller
 {
@@ -20,10 +21,12 @@ class CaptureController extends Controller
     public function index() {
         $configuration = app('db')->select("SELECT name,
         (SELECT url FROM images WHERE id = logo_id) AS logo,
-        (SELECT url FROM images WHERE id = landing_background_id) AS landingBg,
-        (SELECT url FROM images WHERE id = publicity_id) AS publicity
+        (SELECT url FROM images WHERE id = landing_background_id) AS landingBg
         FROM config");
         $data['config'] = $configuration[0];
+        $data['banners'] = Banner::select('banners.id', 'url', 'banners.created_at')
+            ->join('images', 'images.id', 'banners.imagen_id')
+            ->get();
         return view('capture.index', $data);
     }
 
@@ -48,10 +51,12 @@ class CaptureController extends Controller
     public function success(){
         $configuration = app('db')->select("SELECT name, success_text,
         (SELECT url FROM images WHERE id = logo_id) AS logo,
-        (SELECT url FROM images WHERE id = publicity_id) AS publicity,
         (SELECT url FROM images WHERE id = success_background_id) AS successBg
         FROM config");
         $data['config'] = $configuration[0];
+        $data['banners'] = Banner::select('banners.id', 'url', 'banners.created_at')
+            ->join('images', 'images.id', 'banners.imagen_id')
+            ->get();
         return view('capture.success', $data);
     }
 }

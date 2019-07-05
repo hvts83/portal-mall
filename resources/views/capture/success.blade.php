@@ -25,7 +25,21 @@
             <h2>Bienvenido</h2>
             <p>{{ $config->success_text }}</p>
             </div>
-            <div><img src="{{ $config->publicity }}" class="img-publicity" /></div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @php $i = 0 @endphp
+                        @foreach ($banners as $banner)
+                            <li data-target="#myCarousel" data-slide-to="0" @if($i == 0) class="active" @endif></li>        
+                        @endforeach
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        @php $i = 0 @endphp
+                        @foreach ($banners as $banner)
+                            <div class="item {{ $i == 0 ? 'active': null  }}"><img src={{ $config->logo }} ></div>
+                        @endforeach
+                    </div>
+            </div><!-- /.carousel -->
         </div>
     </div>
 

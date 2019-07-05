@@ -19,3 +19,6 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/configuracion', 'HomeController@config')->name('configuracion');
 Route::post('/configuracion', 'HomeController@store');
+Route::get('/banner', 'BannerController@index')->name('banner');
+Route::post('/banner/send', 'BannerController@send');
+Route::post('/banner/delete', 'BannerController@delete');

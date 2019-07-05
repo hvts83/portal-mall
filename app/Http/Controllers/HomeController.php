@@ -48,7 +48,6 @@ class HomeController extends Controller
         $configuration = app('db')->select("SELECT name, success_text,
         (SELECT url FROM images WHERE id = logo_id) AS logo,
         (SELECT url FROM images WHERE id = landing_background_id) AS landingBg,
-        (SELECT url FROM images WHERE id = publicity_id) AS publicity,
         (SELECT url FROM images WHERE id = success_background_id) AS successBg
         FROM config");
         $data['config'] = $configuration[0];
@@ -99,16 +98,6 @@ class HomeController extends Controller
               $imagen3->save();
           
               $config->success_background_id = $imagen3->id;
-            }
-
-            if($request->hasFile('publicity')){
-              $imageName = 'publicity' . time() . '.' . $request->publicity->getClientOriginalExtension();
-              $request->publicity->move( base_path() . '/public/' . $url , $imageName );
-              $imagen4 = new Image();
-              $imagen4->url = $url . '/' . $imageName;
-              $imagen4->save();
-          
-              $config->publicity_id = $imagen4->id;
             }
 
             $config->save();

@@ -27,6 +27,9 @@
         <li>
             <a href="{{ route('configuracion')}}"><i class="fa fa-cog"></i> <span class="nav-label">Configuración</span></a>
         </li>
+        <li>
+          <a href="{{ route('banner')}}"><i class="fa fa-cog"></i> <span class="nav-label">Banners</span></a>
+        </li>
       
       </ul>
     </div>
