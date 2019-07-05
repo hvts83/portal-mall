@@ -38,11 +38,11 @@
                                             <span class="fileinput-filename"></span>
                                             </div>
                                             <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Select file</span>
-                                                <span class="fileinput-exists">Change</span>
+                                                <span class="fileinput-new">Seleccione archivo</span>
+                                                <span class="fileinput-exists">Cambiar</span>
                                                 <input type="file" name="logo"/>
                                             </span>
-                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remover</a>
                                     </div>
                                 </div>
                             </div>
@@ -60,11 +60,11 @@
                                             <span class="fileinput-filename"></span>
                                             </div>
                                             <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Select file</span>
-                                                <span class="fileinput-exists">Change</span>
+                                                <span class="fileinput-new">Seleccione archivo</span>
+                                                <span class="fileinput-exists">Cambiar</span>
                                                 <input type="file" name="landingBg"/>
                                             </span>
-                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remover</a>
                                     </div>
                                 </div>
                             </div>
@@ -81,11 +81,11 @@
                                             <span class="fileinput-filename"></span>
                                             </div>
                                             <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Select file</span>
-                                                <span class="fileinput-exists">Change</span>
+                                                <span class="fileinput-new">Seleccione archivo</span>
+                                                <span class="fileinput-exists">Cambiar</span>
                                                 <input type="file" name="successBg"/>
                                             </span>
-                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remover</a>
                                     </div>
                                 </div>
                             </div>

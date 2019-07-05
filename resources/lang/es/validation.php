@@ -14,9 +14,9 @@ return [
     */
 
     'accepted' => 'The :attribute must be accepted.',
-    'active_url' => 'The :attribute is not a valid URL.',
-    'after' => ':attribute debe ser una fecha después de :date.',
-    'after_or_equal' => 'The :attribute must be a date after or equal to :date.',
+    'active_url' => 'The :attribute no es una URL valida.',
+    'after' => ':attribute debe ser una fecha después de la indicada',
+    'after_or_equal' => ':attribute must be a date after or equal to :date.',
     'alpha' => ':attribute solo debe contener solo letras.',
     'alpha_dash' => ':attribute solo debe contener letras, números, guión medio y guión bajo.',
     'alpha_num' => ':attribute solo debe contener letras y números.',
@@ -56,7 +56,7 @@ return [
         'string' => 'The :attribute must be greater than or equal :value characters.',
         'array' => 'The :attribute must have :value items or more.',
     ],
-    'image' => 'The :attribute must be an image.',
+    'image' => ':attribute debe ser una imagen.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
@@ -95,7 +95,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => ':attribute es obligatorio.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -145,6 +145,10 @@ return [
     |
     */
 
-    'attributes' => [],
-
+    'attributes' => [
+        'birthday' => 'Fecha de nacimiento',
+        'email' => 'Correo',
+        'name' => 'Nombre',
+        'success_text' => 'Texto al finalizar registro'
+    ],
 ];
