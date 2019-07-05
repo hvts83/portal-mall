@@ -31,8 +31,6 @@ class BannerController extends Controller{
     }
 
     public function send(Request $request){
-
-        dd($request->hasFile('publicity'));
         $url = 'images';
         DB::beginTransaction();
           try {

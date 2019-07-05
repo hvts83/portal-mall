@@ -30,13 +30,17 @@
                     <ol class="carousel-indicators">
                         @php $i = 0 @endphp
                         @foreach ($banners as $banner)
-                            <li data-target="#myCarousel" data-slide-to="0" @if($i == 0) class="active" @endif></li>        
+                            <li data-target="#myCarousel" @if($i == 0) class="active" @endif></li>  
+                            @php $i++ @endphp      
                         @endforeach
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         @php $i = 0 @endphp
                         @foreach ($banners as $banner)
-                            <div class="item {{ $i == 0 ? 'active': null  }}"><img src={{ $config->logo }} ></div>
+                            <div class="item {{ $i == 0 ? 'active': null  }}">
+                                <img src="{{ $banner->url }}"  class="img-publicity"/>
+                            </div>
+                            @php $i++ @endphp
                         @endforeach
                     </div>
             </div><!-- /.carousel -->
