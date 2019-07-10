@@ -18,6 +18,7 @@
         -moz-background-size: cover; 
         -o-background-size: cover; background-size: cover;"
 >
+    @php use Carbon\Carbon; @endphp
     <div class="loginBox animated fadeInDown">
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -39,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label for="birthday">Fecha nacimiento</label>
-                    <input type="date" class="form-control" name="birthday" required=>
+                    <input type="date" class="form-control" name="birthday" required max="{{Carbon::yesterday()}}" value="{{Carbon::now()->subYear(6)->toDateString() }}" >
                 </div>
                 <div class="form-group">
                     <label for="sexo">Sexo</label>
