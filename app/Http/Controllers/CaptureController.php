@@ -34,7 +34,7 @@ class CaptureController extends Controller
 
         $request->validate([
             'email' => 'email|required',
-            'birthday' => 'required|before:today',
+            'birthday' => 'required|olderThan',
             'sexo' => 'required'
         ]);
 
